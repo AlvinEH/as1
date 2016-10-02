@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HabitName"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="HabitName"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textIsSelectable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/HabitDate"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/HabitName"
+        android:layout_alignEnd="@+id/HabitName"
+        android:layout_alignStart="@+id/HabitName"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="HabitDate"
+        android:textIsSelectable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/HabitDate"
+        android:layout_alignStart="@+id/HabitDate"
+        android:layout_alignEnd="@+id/HabitDate"
+        android:text="Repeat" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunday"
+        android:id="@+id/SundayCheck"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:id="@+id/MondayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/SundayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:id="@+id/TuesdayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/MondayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:id="@+id/WednesdayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/TuesdayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:id="@+id/ThursdayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/WednesdayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:id="@+id/FridayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ThursdayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:height="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saturday"
+        android:id="@+id/SaturdayCheck"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/FridayCheck"
+        android:layout_alignStart="@+id/SundayCheck"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/editText"
+        android:checked="false"
+        android:height="35dp" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:text="CANCEL"
+        android:id="@+id/cancel_button_new_habit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/HabitName"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:text="SAVE"
+        android:id="@+id/save_button_new_habit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/HabitName"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

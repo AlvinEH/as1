@@ -7,10 +7,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.alvin.as1.MainActivity">
+    tools:context="com.example.alvin.as1.MainActivity"
+    android:background="#000000">
 
-    <TextView
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="1200px"
+        android:id="@+id/listView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:listitem="@android:layout/simple_list_item_checked"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:smoothScrollbar="true"
+        android:background="@android:color/darker_gray" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Add New Habit"
+        android:id="@+id/new_habit_button"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/listView"
+        android:layout_below="@+id/listView"
+        android:layout_alignParentEnd="true"
+        android:textSize="30dp"
+        android:clickable="true" />
+
 </RelativeLayout>

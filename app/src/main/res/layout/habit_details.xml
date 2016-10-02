@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-</LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/selected_habit_name"
+        android:layout_weight="0.20"
+        android:text="Selected Habit Name"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_date"
+        android:layout_below="@+id/selected_habit_name"
+        android:layout_alignStart="@+id/selected_habit_name"
+        android:layout_alignEnd="@+id/selected_habit_name"
+        android:text="Start date: &lt;Date>" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/repeated_days_of_week"
+        android:layout_below="@+id/start_date"
+        android:layout_alignStart="@+id/start_date"
+        android:layout_alignEnd="@+id/start_date"
+        android:text="Repeated on:" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Completed\n&lt;x> times"
+        android:id="@+id/completed_count"
+        android:layout_below="@+id/repeated_days_of_week"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Add\nCompletion"
+        android:id="@+id/add_completion"
+        android:layout_above="@+id/delete_habit_completion_button"
+        android:layout_alignStart="@+id/delete_habit_completion_button"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Delete Habit"
+        android:id="@+id/delete_habit_button"
+        android:layout_weight="0.14"
+        android:textAlignment="inherit"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/completed_count"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Delete Habit\nCompletion"
+        android:id="@+id/delete_habit_completion_button"
+        android:layout_weight="0.14"
+        android:layout_gravity="top"
+        android:textAlignment="inherit"
+        android:layout_alignTop="@+id/delete_habit_button"
+        android:layout_toEndOf="@+id/delete_habit_button" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:text="CANCEL"
+        android:id="@+id/cancel_button_details"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/repeated_days_of_week"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:text="SAVE"
+        android:id="@+id/save_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/repeated_days_of_week"
+        android:textSize="20dp" />
+
+</RelativeLayout>
