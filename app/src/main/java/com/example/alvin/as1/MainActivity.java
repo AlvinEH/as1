@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,14 +23,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String FILENAME = "file.sav";
-    private ListView oldHabitsList;
+    protected ListView oldHabitsList;
     protected EditText bodyText;
 
-    private ArrayList<Habit> habitList = new ArrayList<Habit>();
+    protected ArrayList<Habit> habitList = new ArrayList<Habit>();
 
     private ArrayAdapter<Habit> adapter;
 
@@ -40,22 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         bodyText = (EditText) findViewById(R.id.HabitName);
         oldHabitsList = (ListView) findViewById(R.id.HabitsView);
-
-//        Button saveButton = (Button) findViewById(R.id.save_button_new_habit);
-//        saveButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                setResult(RESULT_OK);
-//                String text = bodyText.getText().toString();
-//                bodyText.setText("");
-//
-//                Habit newHabit = new Habit(text);
-//
-//                habitList.add(newHabit);
-//                adapter.notifyDataSetChanged();
-//
-//                saveInFile();
-//            }
-//        });
     }
 
     @Override
@@ -108,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void NewHabit(View v) {
+        Toast.makeText(this,"Adding New Habit", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, NewHabitCreationActivity.class);
         startActivity(intent);
 

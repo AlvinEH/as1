@@ -140,7 +140,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/HabitName"
         android:textSize="20dp"
-        android:onClick="mainActivity"/>
+        android:onClick="cancelHabitCreation"/>
 
     <Button
         android:layout_width="195dp"
@@ -150,7 +150,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@id/HabitName"
         android:textSize="20dp"
-        android:onClick="mainActivity"/>
+        android:onClick="addNewHabit"/>
 
 
 

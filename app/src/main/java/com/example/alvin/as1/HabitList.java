@@ -13,6 +13,7 @@ public class HabitList {
     public HabitList() {
         habitList = new ArrayList<Habit>();
     }
+
     public Collection<Habit> getHabits() {
         return habitList;
     }

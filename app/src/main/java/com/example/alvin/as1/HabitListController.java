@@ -11,4 +11,8 @@ public class HabitListController {
         }
         return habitList;
     }
+
+    public void addHabit(Habit habit){
+        getHabitList().addHabit(habit);
+    }
 }
