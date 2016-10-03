@@ -86,7 +86,8 @@
         android:id="@+id/cancel_button_details"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/repeated_days_of_week"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:onClick="mainActivity"/>
 
     <Button
         android:layout_width="195dp"
@@ -95,6 +96,7 @@
         android:id="@+id/save_button"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@id/repeated_days_of_week"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:onClick="mainActivity"/>
 
 </RelativeLayout>

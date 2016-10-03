@@ -8,7 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.alvin.as1.MainActivity"
-    android:background="#000000">
+    android:background="#000000"
+    android:nestedScrollingEnabled="false">
 
     <ListView
         android:layout_width="wrap_content"
@@ -20,7 +21,9 @@
         android:fastScrollAlwaysVisible="false"
         android:fastScrollEnabled="false"
         android:smoothScrollbar="true"
-        android:background="@android:color/darker_gray" />
+        android:background="@android:color/darker_gray"
+        android:longClickable="true"
+        android:clickable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -34,6 +37,7 @@
         android:layout_below="@+id/listView"
         android:layout_alignParentEnd="true"
         android:textSize="30dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:onClick="NewHabit"/>
 
 </RelativeLayout>
