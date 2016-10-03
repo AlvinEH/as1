@@ -28,6 +28,7 @@ import java.util.Date;
 
 public class NewHabitCreationActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

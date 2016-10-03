@@ -1,3 +1,16 @@
+
+//					GNU GENERAL PUBLIC LICENSE
+//					Version 3, 29 June 2007
+//
+//		Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+//		Everyone is permitted to copy and distribute verbatim copies
+//		of this license document, but changing it is not allowed.
+//
+//		{HabitTracker}  Copyright (C) {2016}  {Alvin Huang}
+//		This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+//		This is free software, and you are welcome to redistribute it
+//		under certain conditions; type `show c' for details.
+
 package com.example.alvin.as1;
 
 import android.content.Intent;
@@ -40,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bodyText = (EditText) findViewById(R.id.HabitName);
         oldHabitsList = (ListView) findViewById(R.id.HabitsView);
     }
 
@@ -53,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         oldHabitsList.setAdapter(adapter);
     }
 
+    protected void onResume() {
+        super.onResume();
+        loadFromFile();
+    }
 
     private void loadFromFile() {
         try {
@@ -72,26 +88,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    0);
-
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-
-            Gson gson = new Gson();
-            gson.toJson(habitList, out);
-            out.flush();
-
-            fos.close();
-        } catch (FileNotFoundException e) {
-			/* Rethrow. */
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-			/* Rethrow. */
-            throw new RuntimeException(e);
-        }
-    }
 
     public void NewHabit(View v) {
         Toast.makeText(this,"Adding New Habit", Toast.LENGTH_SHORT).show();
